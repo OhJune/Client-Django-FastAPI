@@ -1,0 +1,47 @@
+{% extends "navbar.html" %}
+
+{% block title %}오준{% endblock %}
+
+{% block font %}'Gowun Batang', serif{% endblock %}
+
+{% block style %}{% endblock %}
+
+{% block content %}
+<div align="center" style="border:3px solid #72A0BA; width:600px; border-radius: 40px; margin:800px 0px 0px 0px; ">
+    <h1 style="color: #72A0BA;">안녕 <u>나의 관심사~는</u></h1>
+    <h2 style="color:blue"><i>"뭘까?"</i></h2>
+    <img src="/static/img/g.jpg" height=300 alt="My Image">
+    <p>떠나고 싶다</p>
+    <p>훌쩍~ </p>
+    <p>빨리빨리 끝내자</p>
+    <ul>
+        <p><a href="https://kr.trip.com/travel-guide/destination/okinawa-prefecture-292/" style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;"><b>일본 오키나와</b></a></p>
+        <p><a href="http://127.0.0.1:8000/page1/"  style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;"><b>★온김에 희수의 관심사도 알아보기★</b></a></p>
+        <p><a href="http://127.0.0.1:8000/page2/"  style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;"><b>★온김에 지빈의 관심사도 알아보기★</b></a></p>
+        <p><a href="http://127.0.0.1:8000/"  style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;"><b>돌아가기</b></a></p>
+    </ul>
+    <style>
+        textarea {
+          width: 50%;
+          height: 200px; 
+        }
+        label {
+            display: block; /* 블록 레벨 요소로 설정 */
+          }
+    </style>
+
+    <form action="/create/" method="post">
+        <div style="margin-bottom: 50px;">
+          <label for="title">제목</label>
+          <input type="text" id="title" name="title" placeholder="comment 제목">
+        </div>
+        <div style="margin-bottom: 10px;">
+          <label for="body">내용</label>
+          <textarea id="body" name="body" placeholder="comment"></textarea>
+        </div>
+        <div style="margin-bottom: 50px;">
+          <input type="submit" value="제출">
+        </div>
+      </form>
+</div>
+{% endblock %}

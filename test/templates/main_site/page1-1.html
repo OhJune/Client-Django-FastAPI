@@ -1,0 +1,74 @@
+{% extends 'main_site/base.html' %}
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+{% block content %}
+<!-- main_site.html 내용 -->
+
+<!doctype html>
+<html lang="ko">
+  <head>
+  <html lang="ko">
+    <head>
+      <meta charset="utf-8">
+      <title>★희수's favorite★</title>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Jua&display=swap');
+        
+        body {
+          background-color: #CCCCFF;
+          font-family: 'Jua', sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+        }
+
+        h1 {
+          color: #333399;
+        }
+
+        a {
+          font-size: 20px;
+          text-decoration: none;
+          color: #2E2E2E;
+          border: 2px solid #75B1FF;
+          padding: 0 20px;
+          border-radius: 50px;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        a:hover {
+          background-color: #8787FF;
+          color: #FFFAA2;
+        }
+      </style>
+  </head>
+  <body align = "center">
+    <h1>★희수의 관심사★</h1>
+    <img src="/static/img/손흥민.png" alt="My Image" height="250">
+<div class="content">
+    <p> <b>이름</b> : 손흥민<br>
+        <b>생년월일</b> : 1992.07.08<br>
+        <b>소속팀</b> : 토트넘 홋스퍼 FC<br>
+        <b>신장</b> : 183cm<br>
+        <b>체중</b> : 77kg<br>
+        <b>데뷔</b> : 2010년 함부르크 SV 입단<br>
+        <b>지난 시즌 성적</b> : 24득점 8도움<br>
+        <b>현재 시즌 성적</b> : 14득점 5도움<br>
+        <b>지난 경기 하이라이트</b> : <a href="https://www.youtube.com/watch?v=3zO08Z51CB4">▶영상 보러가기◀</a><br>
+        <b>손흥민 득점왕 인터뷰</b> : <a href="https://www.youtube.com/watch?v=-SugVv0JRZE">▶영상 보러가기◀</a><br>
+    </p>
+</div>
+<div>
+    <p> 
+        <a href="http://127.0.0.1:8000/">▶home◀</a><br>
+        <a href="http://127.0.0.1:8000/page2/">▶지빈's page◀</a><br>
+    </p>
+</div>
+  </body>
+</html>
+{% endblock %}

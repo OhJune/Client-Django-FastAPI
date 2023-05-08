@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Gowun+Batang&family=Jua&display=swap');
+        
+        body {
+          background-color: #FFFAA2;
+          font-family: {% block font %}{% endblock %};
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+        }
+        
+        .nav {
+          background-color: #75B1FF;
+          height: 80px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 50px;
+          width: 100%;
+          position: fixed;
+          top: 0;
+        }
+        
+        .nav-logo {
+          color: #FFFAA2;
+          font-size: 40px;
+          font-weight: bold;
+          text-decoration: none;
+        }
+        
+        .nav-links {
+          display: none;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        
+        .nav-links li {
+          margin-left: 50px;
+        }
+        
+        .nav-links a {
+          color: #FFFAA2;
+          text-decoration: none;
+          font-size: 26px;
+          padding: 5px 15px;
+          border-radius: 50px;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        .nav-links a:hover {
+          background-color: #F2F2F2;
+          color: #2E2E2E;
+        }
+        
+        .nav:hover .nav-links {
+          display: flex;
+        }
+        
+        h1 {
+            margin-top: 30px;
+          }
+
+        h2 {
+          font-size: 50px;
+          text-align: center;
+          color: #2E2E2E;
+        }
+        
+        ul {
+          text-align: center;
+        }
+        
+        li {
+          display: inline-block;
+          margin: 50px;
+        }
+        
+        a {
+          font-size: 50px;
+          text-decoration: none;
+          color: #2E2E2E;
+          border: 2px solid #75B1FF;
+          padding: 10px 50px;
+          border-radius: 50px;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        a:hover {
+          background-color: #FFAEC6;
+          color: #FFFAA2;
+        }
+
+        {% block style %}{% endblock %}
+
+      </style>
+</head>
+
+<body align="center">
+    <nav class="nav">
+        <a href="http://127.0.0.1:8000/" class="nav-logo">♥우리의 관심사♥</a>
+        <ul class="nav-links">
+            <li><a href="http://127.0.0.1:8000/"><b>Home</b></a></li>
+            <li><a href="http://127.0.0.1:8000/about/"><b>About</b></a></li>
+            <li><a href="http://127.0.0.1:8000/contact/"><b>Contact</b></a></li>
+        </ul>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+</body>
+
+</html>
