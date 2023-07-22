@@ -9,3 +9,6 @@
 3. FastAPI: FastAPI 서비스에 API로 구현되어 있습니다. 더 빠른 처리와 ML 모델 실행 제공합니다.
 
 **따라서 클라이언트는 웹 브라우저와 JavaScript, 서버는 장고와 FastAPI로 구성됩니다.**
+
+![image](https://github.com/OhJune/Client-Django-FastAPI/assets/124857930/572f2c4e-9e41-4105-af9b-3a1bde55ad8d)
+
