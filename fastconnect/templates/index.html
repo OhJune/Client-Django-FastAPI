@@ -1,0 +1,36 @@
+<!-- django_project/app/templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>장고 - FastAPI 연동 예제</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  <!-- jQuery 라이브러리를 추가합니다. -->
+</head>
+<body>
+    <h1>입력값 전송:</h1>
+    <label for="input_data">입력값:</label>
+    <input type="text" id="input_data">
+    <button id="submit_button">전송</button>
+
+    <h2>결과 출력:</h2>
+    <pre id="result"></pre>
+
+    <script>
+        document.getElementById("submit_button").addEventListener("click", () => {
+            const input_data = document.getElementById("input_data").value;
+            const url = "/process";
+            const data = JSON.stringify({"input_data": input_data});
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const result = JSON.parse(xhr.responseText).result;
+                    document.getElementById("result").textContent = result;
+                }
+            };
+            xhr.send(data);
+        });
+    </script>
+</body>
+</html>
