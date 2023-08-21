@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Celery
+    'django_celery_beat',
+    'django_celery_results',
+    'myapp',
 ]
 
 MIDDLEWARE = [
@@ -78,9 +82,13 @@ WSGI_APPLICATION = 'fastconnect.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "final",
+        "USER": "heesu",
+        "PASSWORD": "AlsongDlsong",
+        "HOST": "35.216.91.72",
+        "PORT": "5432",
     }
 }
 
@@ -125,3 +133,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CELERY_BROKER_URL = "amqp://guest:guest@localhost:5672//"
+CELERY_RESULT_BACKEND = 'redis://:AlsongDlsong@35.216.91.72:6379/3'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+# REDIS_HOST = "redis://35.216.91.72"  # Redis 서버의 호스트 이름 또는 IP 주소
+# REDIS_PORT = 6379  
+# REDIS_DB = 2
+
+

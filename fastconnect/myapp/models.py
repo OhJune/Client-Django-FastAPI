@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class ResultData(models.Model):
+    output_data = models.TextField(blank=True, default="")
+    
