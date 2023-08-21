@@ -10,5 +10,15 @@
 
 **따라서 클라이언트는 웹 브라우저와 JavaScript, 서버는 장고와 FastAPI로 구성됩니다.**
 
-![image](https://github.com/OhJune/Client-Django-FastAPI/assets/124857930/572f2c4e-9e41-4105-af9b-3a1bde55ad8d)
++) 사용자가 증가할 경우 비동기 처리방식으로 celery와 브로커인 rabbitmq를 사용
+
+![image](https://github.com/OhJune/Client-Django-FastAPI/assets/124857930/44acfce7-9f12-45ac-81bf-36cac69b70f0)
+
+--
+## FastAPI 기능
+
+1. model 서빙 : 학습된 모델인 word2vec을 이용하여 사용자의 플레이리스트에 따른 추천곡 10곡을 DB에서 조회 후 response
+
+2. GPT추천 값 서빙 : 학습된 모델에 없는 플레이리스트가 들어올 경우 chatgpt api를 사용하여 response 
+
 
