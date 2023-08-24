@@ -14,7 +14,15 @@ https://oh-um.tistory.com/30
 
 +) 사용자가 증가할 경우 비동기 처리방식으로 celery와 브로커인 rabbitmq를 사용
 
+
 ![image](https://github.com/OhJune/Client-Django-FastAPI/assets/124857930/44acfce7-9f12-45ac-81bf-36cac69b70f0)
+
+### ✏️사용 스택
+<img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white">  <img src="https://img.shields.io/badge/fastapi-009688?style=for-the-badge&logo=fastapi&logoColor=white">
+<img src="https://img.shields.io/badge/celery-37814A?style=for-the-badge&logo=celery&logoColor=white">
+<img src="https://img.shields.io/badge/rabbitmq-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white">
+<img src="https://img.shields.io/badge/redis-DC382D?style=for-the-badge&logo=redis&logoColor=white">
+<img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
 
 
 ## FastAPI 기능
