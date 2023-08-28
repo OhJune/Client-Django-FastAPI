@@ -10,10 +10,13 @@
 
 **따라서 클라이언트는 웹 브라우저와 JavaScript, 서버는 장고와 FastAPI로 구성됩니다.**
 
-https://oh-um.tistory.com/30
+     https://oh-um.tistory.com/30
 
 +) 사용자가 증가할 경우 비동기 처리방식으로 celery와 브로커인 rabbitmq를 사용
-
+     
+     https://oh-um.tistory.com/31
+     
+     https://oh-um.tistory.com/32
 
 ![image](https://github.com/OhJune/Client-Django-FastAPI/assets/124857930/44acfce7-9f12-45ac-81bf-36cac69b70f0)
 
